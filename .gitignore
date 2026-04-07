@@ -1,0 +1,20 @@
+# Ignore environment files
+.env
+.env.*
+!.env.example
+
+# Ignore node modules
+node_modules/
+
+# Ignore specific project folders
+admin/.env
+server/.env
+client/.env
+
+# Optional: logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

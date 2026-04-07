@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+}
+
+.blue {
+    color: #032840
+}
+
+.light-blue {
+    color: #032840
+}
+
+.bg-blue {
+    background-color: #032840
+}
+
+.hover {
+    background-color: #04304e80
+}
+
+.bg-orange {
+    background-color: #43BA89
+}
+
+.orange {
+    color: #43BA89
+}
+
+body {
+    @apply bg-white text-gray-900 text-sm antialiased;
+}
+
+button {
+    @apply cursor-pointer;
+}
