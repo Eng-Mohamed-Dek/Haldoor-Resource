@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
 
         {/* login route */}
-        <Route path="/loginhirkaab45" element={<Login />} />
+        <Route path="/admin-login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
 
         {/* protected routes */}
