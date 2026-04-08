@@ -15,8 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/templates", templateRoutes)
-app.use("/", authRouter)
+app.use("/api/templates", templateRoutes)
+app.use("/api", authRouter)
 
 app.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
