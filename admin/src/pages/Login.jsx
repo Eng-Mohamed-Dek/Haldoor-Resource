@@ -23,8 +23,11 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const apiUrl = import.meta.env.VITE_REACT_BACKEND_API;
+
+
         try {
-            const res = await axios.post("http://localhost:5000/login", {
+            const res = await axios.post(`${apiUrl}/login`, {
                 email: formData.email,
                 password: formData.password
             });
