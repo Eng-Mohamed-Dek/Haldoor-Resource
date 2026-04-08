@@ -24,7 +24,7 @@ export default function Sidebar({ items, open, onClose }) {
       >
         {/* Logo */}
         <div className={`flex flex-col md:flex-row justify-center items-center ${collapsed ? "items-center" : "items-start"} sticky top-0 bg-white z-10`}>
-          <img src="/logo.png" alt="Logo" className={`${collapsed ? "w-0" : ""} cursor-pointer`} />
+          <img src="/logo.png" alt="Logo" className={`${collapsed ? "w-0" : "h-25"} cursor-pointer pt-2`} />
           <div className="hidden md:flex justify-end pt-10">
             <button onClick={() => setCollapsed(!collapsed)} className="cursor-pointer text-gray-600 hover:bg-gray-100 rounded transition">
               {collapsed ? <ChevronRight size={25} /> : <ChevronLeft size={25} />}
@@ -98,7 +98,7 @@ export default function Sidebar({ items, open, onClose }) {
                 localStorage.removeItem("user");
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("refreshToken");
-                window.location.href = "/login";
+                window.location.href = "/admin-login";
               }}
               className={`mt-4 cursor-pointer border border-red-200 text-center text-red-600 hover:bg-red-100 rounded-md transition text-sm ${collapsed ? "py-2 px-1" : "py-2.5 px-4"}`}
               title={collapsed ? "Logout" : undefined}

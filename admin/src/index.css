@@ -7,24 +7,28 @@
 }
 
 
-.bg-blue {
-    background-color: #253C80
-}
-
 .blue {
-    color: #253C80
+    color: #032840
 }
 
 .light-blue {
-    color: #3055B2
+    color: #032840
+}
+
+.bg-blue {
+    background-color: #032840
+}
+
+.hover {
+    background-color: #04304e80
 }
 
 .bg-orange {
-    background-color: #EF5324
+    background-color: #43BA89
 }
 
 .orange {
-    color: #EF5324
+    color: #43BA89
 }
 
 @keyframes gridMove {
