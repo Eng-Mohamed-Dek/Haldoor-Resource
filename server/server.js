@@ -12,7 +12,8 @@ setServers(["1.1.1.1", "8.8.8.8"]);
 const app = express();
 
 app.use(express.json());
-
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 const allowedOrigins = [
   "https://resources.hirkaab.com",
   "https://www.resources.hirkaab.com",
