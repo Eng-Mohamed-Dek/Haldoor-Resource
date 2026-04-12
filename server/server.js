@@ -11,9 +11,26 @@ setServers(["1.1.1.1", "8.8.8.8"]);
 
 const app = express();
 
-// Middleware
-app.use(cors());
 app.use(express.json());
+
+const allowedOrigins = [
+  "https://resources.hirkaab.com",
+  "https://www.resources.hirkaab.com"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-refresh-token"],
+}));
 
 app.use("/api/templates", templateRoutes)
 app.use("/api", authRouter)
