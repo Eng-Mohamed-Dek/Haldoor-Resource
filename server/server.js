@@ -15,7 +15,8 @@ app.use(express.json());
 
 const allowedOrigins = [
   "https://resources.hirkaab.com",
-  "https://www.resources.hirkaab.com"
+  "https://www.resources.hirkaab.com",
+  "https://admin.hirkaab.com"
 ];
 
 app.use(cors({
