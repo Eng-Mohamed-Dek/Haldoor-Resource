@@ -5,11 +5,10 @@ import cloudinary from "./cloudinary.js";
 // PDF storage for certificates
 const storage = new CloudinaryStorage({
   cloudinary,
-  params: {
+   params: {
     folder: "avatar",
-    allowed_formats: ["jpg", "jpeg", "png", "webp"],
-    // transformation: [{ width: 300, height: 300, crop: "fill" }],
-  },
+    allowed_formats: "jpg,jpeg,png,webp", // ✅ FIXED
+  }
 });
 
 export const upload = multer({
