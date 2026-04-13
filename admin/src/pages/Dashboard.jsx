@@ -40,7 +40,7 @@ const Dashboard = () => {
 
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6">Templates Dashboard</h1>
+      <h1 className="text-3xl font-bold mb-6">Template Dashboard</h1>
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
